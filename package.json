@@ -1,0 +1,16 @@
+{
+  "name": "gulp_imagemin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "imagemin": "gulp imagemin"
+  },
+  "devDependencies": {
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
