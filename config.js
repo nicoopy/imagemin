@@ -1,8 +1,8 @@
 module.exports = {
   // origin image directory
-  assetsPath: './image',
+  assetsPath: '/opt/hotdoc/imagemin/image',
   // target image directory
-  buildPath: './image-min',
+  buildPath: '/opt/hotdoc/imagemin/image-min',
   // image quality between 0 and 100
   imageQuality: 50,
   // open lossless compression
