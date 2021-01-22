@@ -1,6 +1,6 @@
 # Imagemin by gulp
 
-# Environment
+## Environment
 node@latest
 
 ## Install
