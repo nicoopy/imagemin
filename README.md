@@ -16,7 +16,7 @@ $ cnpm install
 + imageQuality: jpeg文件压缩质量, number, [0,100]
 + progressive: 是否开启无损压缩, boolean, true/false
 
-## Minimize images
+## Minify images
 ```bash
 $ npm run imagemin
 ```
