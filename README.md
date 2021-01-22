@@ -5,6 +5,13 @@
 $ npm install
 ```
 
+## Configure
+修改 config.js 文件中的相关配置：
++ assetsPath: 原始图片文件路径
++ buildPath: 压缩目标文件路径
++ imageQuality: jpeg文件压缩质量, number, [0,100]
++ progressive: 是否开启无损压缩, boolean, true/false
+
 ## Minimize images
 ```bash
 $ npm run imagemin
