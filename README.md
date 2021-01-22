@@ -1,5 +1,8 @@
 # Imagemin by gulp
 
+# Environment
+node@latest
+
 ## Install
 ```bash
 $ npm install cnpm -g
