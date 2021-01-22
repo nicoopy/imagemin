@@ -1,31 +1,41 @@
 # gulp-imagemin
 
+## Install
 ```bash
 $ npm install
+```
+
+## Minimize images
+```bash
 $ npm run imagemin
 ```
 
-### Others
+## Clear all images cache
+```bash
+$ npm run clear-cache
+```
 
-#### problem1: 
+## Problems:
+
+### Problem1:
 ```bash
 $ phantomjs-prebuilt: Command failed.
 ```
-#### solve: 
+### solve: 
 ```bash
 $ npm config set phantomjs_cdnurl=http://cdn.npm.taobao.org/dist/phantomjs_cdnurl
 ```
 
-#### problem2:
+### problem2:
 ```bash
-$ autoreconf: command not found
+$ autoreconf: Command not found
 ```
-#### solve:
+### solve:
 for mac:
 ```bash
 $ brew install libtool automake autoconf nasm
 ```
-for linux:(already install apt-get)
+for linux: ( already install apt-get )
 ```bash
 $ yum install install autoconf automake libtool
 ```
