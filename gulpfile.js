@@ -26,6 +26,7 @@ gulp.task('imagemin', function() {
       imagemin.optipng({optimizationLevel: 5}),
     ],{
       verbose: true,
+      slient: false,
     })))
     .pipe(gulp.dest(`${baseConfig.buildPath}/`));
 });
