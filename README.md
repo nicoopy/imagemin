@@ -1,4 +1,4 @@
-# gulp-imagemin
+# Imagemin by Gulp
 
 ## Install
 ```bash
