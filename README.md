@@ -2,7 +2,8 @@
 
 ## Install
 ```bash
-$ npm install
+$ npm install cnpm -g
+$ cnpm install
 ```
 
 ## Configure
