@@ -1,10 +1,10 @@
 module.exports = {
-  // 原始图片路径
+  // origin image directory
   assetsPath: './image',
-  // 压缩的目标路径
+  // target image directory
   buildPath: './image-min',
-  // 图片质量区间[0,100]
+  // image quality between 0 and 100
   imageQuality: 56,
-  // 是否开启无损压缩 
+  // open lossless compression
   progressive: true,
 };
