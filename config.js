@@ -4,7 +4,7 @@ module.exports = {
   // target image directory
   buildPath: '/opt/hotdoc/imagemin/image-min',
   // image quality between 0 and 100
-  imageQuality: 40,
+  imageQuality: 38,
   // open lossless compression
   progressive: true,
 };
