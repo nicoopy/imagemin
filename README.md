@@ -39,7 +39,7 @@ $ Error: write callback called multiple times
 主要原因：gulp-imagemin依赖一些第三方工具，需要针对不同系统进行安装：
 + for linux: ( already install apt-get )
   ```bash
-  $ yum install autoconf automake libtool
+  $ yum install autoconf automake libtool nasm
   $ rm -rf node_modules
   $ cnpm install
   ```
