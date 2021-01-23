@@ -4,7 +4,7 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "imagemin": "gulp imagemin",
+    "imagemin": "gulp --max_old_space_size=4096 imagemin-all",
     "clear-cache": "gulp clearCache"
   },
   "devDependencies": {
