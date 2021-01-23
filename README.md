@@ -13,7 +13,10 @@ $ cnpm install
 修改 config.js 文件中的相关配置，修改后需运行npm run clear-cache清除历史图片缓存
 + assetsPath: 原始图片文件路径
 + buildPath: 压缩目标文件路径
-+ imageQuality: jpeg文件压缩质量, number, [0,100]
++ smallImageQuality: 200-300kb jpeg文件压缩质量, number, [0,100]
++ mediumImageQuality: 300-500kb jpeg文件压缩质量, number, [0,100]
++ largeImageQuality: 500-1000kb jpeg文件压缩质量, number, [0,100]
++ extraLargeImageQuality: >1000kb jpeg文件压缩质量, number, [0,100]
 + progressive: 是否开启无损压缩, boolean, true/false
 
 ## Minify images
