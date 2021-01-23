@@ -44,13 +44,9 @@ function collectImageFilePath(assetsPath) {
       // 递归调用
       collectImageFilePath(assetsPath + files[i]);
     } else if (/\.(jpeg|jpg|png|ico|svg)$/gi.test(files[i])) {
-      var filePath = 
-        baseConfig.assetsPath + '/' +
-        assetsPath.slice(baseConfig.assetsPath.length, assetsPath.length -1 ).split('/').filter(function(item) {
-          return !!item;
-        }).map(function() { return '**'; }).join('/') +
-        '/'+ files[i];
+      var filePath = './' + assetsPath.replace(baseConfig.assetsPath, '') + files[i];
       filePath = filePath.replace(/\/\//g, '/');
+
       var fileSize = fileStat.size / 1024;
       if (fileSize > 1000) {
         extraLargeImagePathArr.push(filePath);
@@ -100,7 +96,10 @@ gulp.task('imagemin-extraSmall', function() {
   console.log('\r\n\u001b[32m' + '开始拷贝第' + pointer1 + '批图片：' + '\u001b[0m\r\n');
   pointer1 += 1;
   
-  return gulp.src(currentImageFilesPart)
+  return gulp.src(currentImageFilesPart, {
+      cwd: baseConfig.assetsPath,
+      cwdbase: true,
+    })
     .pipe(cache(imagemin([
       imagemin.gifsicle({interlaced: true}),
       imagemin.mozjpeg({
@@ -124,7 +123,10 @@ gulp.task('imagemin-small', function() {
   console.log('\r\n\u001b[32m' + '开始压缩第' + pointer2 + '批图片：' + '\u001b[0m\r\n');
   pointer2 += 1;
   
-  return gulp.src(currentImageFilesPart)
+  return gulp.src(currentImageFilesPart, {
+      cwd: baseConfig.assetsPath,
+      cwdbase: true,
+    })
     .pipe(cache(imagemin([
       imagemin.gifsicle({interlaced: true}),
       imagemin.mozjpeg({
@@ -148,7 +150,10 @@ gulp.task('imagemin-medium', function() {
   console.log('\r\n\u001b[32m' + '开始压缩第' + pointer3 + '批图片：' + '\u001b[0m\r\n');
   pointer3 += 1;
   
-  return gulp.src(currentImageFilesPart)
+  return gulp.src(currentImageFilesPart, {
+      cwd: baseConfig.assetsPath,
+      cwdbase: true,
+    })
     .pipe(cache(imagemin([
       imagemin.gifsicle({interlaced: true}),
       imagemin.mozjpeg({
@@ -172,7 +177,10 @@ gulp.task('imagemin-large', function() {
   console.log('\r\n\u001b[32m' + '开始压缩第' + pointer4 + '批图片：' + '\u001b[0m\r\n');
   pointer4 += 1;
   
-  return gulp.src(currentImageFilesPart)
+  return gulp.src(currentImageFilesPart, {
+      cwd: baseConfig.assetsPath,
+      cwdbase: true,
+    })
     .pipe(cache(imagemin([
       imagemin.gifsicle({interlaced: true}),
       imagemin.mozjpeg({
@@ -196,7 +204,10 @@ gulp.task('imagemin-extraLarge', function() {
   console.log('\r\n\u001b[32m' + '开始压缩第' + pointer5 + '批图片：' + '\u001b[0m\r\n');
   pointer5 += 1;
   
-  return gulp.src(currentImageFilesPart)
+  return gulp.src(currentImageFilesPart, {
+      cwd: baseConfig.assetsPath,
+      cwdbase: true,
+    })
     .pipe(cache(imagemin([
       imagemin.gifsicle({interlaced: true}),
       imagemin.mozjpeg({
