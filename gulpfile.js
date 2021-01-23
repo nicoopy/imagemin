@@ -44,7 +44,13 @@ function collectImageFilePath(assetsPath) {
       // 递归调用
       collectImageFilePath(assetsPath + files[i]);
     } else if (/\.(jpeg|jpg|png|ico|svg)$/gi.test(files[i])) {
-      var filePath = baseConfig.assetsPath + '/' + assetsPath.slice(baseConfig.assetsPath.length, assetsPath.length -1 ).split('/').filter(function(item) {  return !!item }).map(function() { return '**'; }).join('/') + '/'+ files[i];
+      var filePath = 
+        baseConfig.assetsPath + '/' +
+        assetsPath.slice(baseConfig.assetsPath.length, assetsPath.length -1 ).split('/').filter(function(item) {
+          return !!item;
+        }).map(function() { return '**'; }).join('/') +
+        '/'+ files[i];
+      filePath = filePath.replace(/\/\//g, '/');
       var fileSize = fileStat.size / 1024;
       if (fileSize > 1000) {
         extraLargeImagePathArr.push(filePath);
