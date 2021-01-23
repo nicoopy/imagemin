@@ -1,8 +1,8 @@
 module.exports = {
   // origin image directory
-  assetsPath: '/opt/hotdoc/imagemin/image',
+  assetsPath: '/Users/tao/work/gulp_imagemin/image',
   // target image directory
-  buildPath: '/opt/hotdoc/imagemin/image-min',
+  buildPath: '/Users/tao/work/gulp_imagemin/image-min',
   // 200-300kb image quality between 0 and 100
   smallImageQuality: 80,
   // 300-500kb image quality between 0 and 100

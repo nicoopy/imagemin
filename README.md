@@ -31,18 +31,9 @@ $ npm run clear-cache
 
 ## Problems:
 
-### Problem1:
+### problem1:
 ```bash
-$ phantomjs-prebuilt: Command failed.
-```
-### solve: 
-```bash
-$ npm config set phantomjs_cdnurl=http://cdn.npm.taobao.org/dist/phantomjs_cdnurl
-```
-
-### problem2:
-```bash
-$ autoreconf: Command not found
+$ Error: write callback called multiple times
 ```
 ### solve:
 for mac:
@@ -51,5 +42,7 @@ $ brew install libtool automake autoconf nasm
 ```
 for linux: ( already install apt-get )
 ```bash
-$ yum install install autoconf automake libtool
+$ yum install autoconf automake libtool
+$ rm -rf node_modules
+$ cnpm install
 ```
