@@ -230,10 +230,13 @@ gulp.task('clearCache', function(cb) {
   cb();
 });
 
-gulp.task('imagemin-all', gulp.series(
-  new Array(extraLargeImageFilePathParts.length).fill('imagemin-extraSmall'),
-  new Array(extraLargeImageFilePathParts.length).fill('imagemin-small'),
-  new Array(extraLargeImageFilePathParts.length).fill('imagemin-medium'),
-  new Array(extraLargeImageFilePathParts.length).fill('imagemin-large'),
+var seriesItemArr = new Array(extraSmallImageFilePathParts.length).fill('imagemin-extraSmall').concat(
+  new Array(smallImageFilePathParts.length).fill('imagemin-small'),
+  new Array(mediumImageFilePathParts.length).fill('imagemin-medium'),
+  new Array(largeImageFilePathParts.length).fill('imagemin-large'),
   new Array(extraLargeImageFilePathParts.length).fill('imagemin-extraLarge')
-));
+);
+if (seriesItemArr.length === 0) {
+  console.log('\u001b[33m' + '该目录下没有图片文件' + '\u001b[0m');
+}
+gulp.task('imagemin-all', gulp.series(seriesItemArr));
