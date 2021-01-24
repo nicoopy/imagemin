@@ -83,7 +83,9 @@ function batchImageFilePaths(filePathArr, batchSize) {
   if (tempArr.length) {
     newArr.push(tempArr);
   }
-  return newArr;
+  return newArr.filter(function(item) {
+    return item.length !== 0;
+  });
 }
 
 // 压缩 <=200k 的图片，并根据图片文件内容缓存到系统临时文件中
